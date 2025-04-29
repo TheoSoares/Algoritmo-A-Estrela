@@ -19,7 +19,9 @@ O A* (A-estrela) é um algoritmo de busca heurística utilizado para encontrar o
 
 O A* usa uma função de custo `f(n)` para cada nó `n`, definida como:
 
-f(n) = g(n) + h(n)
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?f(n)&space;=&space;g(n)&space;&plus;&space;h(n)" alt="f(n) = g(n) + h(n)">
+</p>
 
 - `g(n)` é o custo do caminho desde o nó inicial até o nó `n`.
 - `h(n)` é uma heurística que estima o custo do nó `n` até o destino.
