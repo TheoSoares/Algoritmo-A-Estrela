@@ -18,7 +18,8 @@ def writemap(mapa, map_path, solve_path):
         mapa[solve_path[i][0]][solve_path[i][1]] = char
         
     with open(map_path, 'w') as archive:
-        for i in mapa:
+        for index, i in enumerate(mapa):
             for j in i:
                 archive.write(str(j))
-            archive.write("\n")
+            if index + 1 < len(mapa):
+                archive.write("\n")
