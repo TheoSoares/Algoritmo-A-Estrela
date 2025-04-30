@@ -1,3 +1,5 @@
+import writemap as wm
+
 def ler_mapa(arquivo):
     with open(arquivo, "r") as f:
         linhas = f.readlines()
@@ -63,9 +65,9 @@ def aStar(start, goal, mapa):
 
     return None
 
-mapa = ler_mapa(input("Insira o caminho absoluto do mapa: "))
+map_path = input("Insira o caminho absoluto do mapa: ")
+mapa = ler_mapa(map_path)
 start,goal = get_start_and_goal(mapa)
+solve_path = aStar(start=start, goal=goal, mapa=mapa)
 
-print("start: ",start,"goal: ",goal)
-caminho = aStar(start, goal, mapa)
-print(caminho)
+wm.writemap(mapa=mapa, map_path=map_path, solve_path=solve_path)
