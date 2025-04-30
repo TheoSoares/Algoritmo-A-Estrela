@@ -33,7 +33,7 @@ def gerar_imagem(caminho_arquivo):
                 pixels[x, y] = cores[valor]
     
     imagem.save(caminho_arquivo[:-4] + '_imagem.png')
-    print("Imagem gerada com sucesso: matriz_imagem.png")
+    print(f"Imagem gerada com sucesso: {caminho_arquivo[:-4]}_imagem.png")
 
-caminho_arquivo = input()
+caminho_arquivo = input("Insira o caminho absoluto do mapa: ")
 gerar_imagem(caminho_arquivo)
