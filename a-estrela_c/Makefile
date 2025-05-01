@@ -5,3 +5,6 @@ ARGS=-Iinclude
 
 all:
 	$(CC) $(ARGS) -o $(BUILD)/astar $(SOURCE)/astar.c $(SOURCE)/node.c $(SOURCE)/writemap.c
+
+run:
+	./$(BUILD)/astar
